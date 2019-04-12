@@ -6,7 +6,7 @@ def Hanoi(n, src, dest, buff):
         dest.append(src[-1])
         del(src[-1])
         i += 1
-        print(i)
+        print(i, )
         return
     Hanoi(n-1, src, buff, dest)
     dest.append(src[-1])
@@ -15,8 +15,8 @@ def Hanoi(n, src, dest, buff):
     print(i)
     Hanoi(n-1, buff, dest, src)
 
-s = [9,8,7,6,5]
+s = [5,4,3,2,1]
 d = []
 b = []
-Hanoi(5, s, d, b)
+Hanoi(len(s), s, d, b)
 print(d)
